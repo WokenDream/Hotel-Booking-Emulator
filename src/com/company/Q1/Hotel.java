@@ -52,6 +52,9 @@ public class Hotel {
                 // make a new array of reservations that excludes this reservation
                 // and let this.reservations array points to the new array
                 // finally mark room available
+                if (this.reservations.length == 0) {
+                    break;
+                }
                 Reservation[] updatedReservations = new Reservation[this.reservations.length - 1];
                 System.arraycopy(this.reservations, 0, updatedReservations, 0, i);
                 System.arraycopy(this.reservations, i + 1, updatedReservations, i, this.reservations.length - i - 1);
