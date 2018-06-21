@@ -121,14 +121,14 @@ public class BookingSystem {
         boolean stop = false;
         int option;
         while (!stop) {
-            System.out.println("**************************************************");
-            System.out.println("Welcome to " + hotelName + ". Choose one of the following options");
+            System.out.println("****************************************************");
+            System.out.println("Welcome to " + hotelName + ". Choose one of the following options:");
             System.out.println("1) Make a reservation");
             System.out.println("2) Cancel a reservation");
             System.out.println("3) See an invoice");
             System.out.println("4) See hotel info");
             System.out.println("5) Exit the Booking System");
-            System.out.println("**************************************************");
+            System.out.println("****************************************************");
 
             option = scanner.nextInt();
             scanner.nextLine(); // consume new line character

@@ -159,7 +159,10 @@ public class Hotel {
             String roomType = info[1];
 
             // add reservation
-            Room room = new Room(roomType);
+            Room room = Room.findAvailableRoom(this.rooms, roomType);
+            if (room == null) {
+                throw new IOException("No available " + roomType +  " room for " + nameReservedFor + ".");
+            }
             room.changeAvailability();
             addReservation(new Reservation(room, nameReservedFor));
         }
